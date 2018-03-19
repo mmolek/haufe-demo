@@ -1,1 +1,16 @@
-Haufe demo
+Hi!
+
+So just to provide some pin points.
+
+1. Clone the repo
+2. run ./run_me_first.sh
+3. Wait a bit
+4. Viola
+
+
+NOTES:
+
+- I dont know if you will actually run this, if so then it is recomended to use CentOS7 ( which I used ). It should owrk on any other Linux distro but you never know :)
+- On last bash task I was not sure what exactly you need from the output ( sometimes process names do not match the root process therefore binary parth cannot be determined ) but I hope I got the righ thing. Maybe I totaly missed it but in that case I can correc tit jsut let me know what exatly you need
+
+- 
