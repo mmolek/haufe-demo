@@ -6,6 +6,9 @@ cat /etc/passwd | cut -d ":" -f1
 echo ""
 
 echo "Here is the map of listening ports in correlation to service binary path"
+echo "NOTE: The ones taht point to and empty filed mean that the process name is not a root process and therefore which cannot find a binary path to it"
+echo
+echo 
 
 N=0
 M=0
