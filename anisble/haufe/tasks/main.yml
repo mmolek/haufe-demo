@@ -1,0 +1,33 @@
+---
+# tasks file for haufe
+- name: Disable selinux
+  selinux:
+    state: disabled
+  become: yes
+
+- name: Update all packages
+  yum:
+    name: "*"
+    state: latest
+  become: yes
+
+- name: Install docker
+  yum:
+    name: docker*
+    state: latest
+    update_cache: yes
+  become: yes
+
+- name: enable docker on boot and unmask it if masked
+  systemd:
+    name: docker
+    enabled: yes
+    state: started
+    masked: no
+  become: yes
+
+- name: Insert ips into hosts
+  lineinfile: 
+    path: /etc/hosts
+    line: '54.77.96.50 gitlab.haufe-umantis.com<http://gitlab.haufe-umantis.com/>'
+  become: yes
